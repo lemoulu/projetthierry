@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Agapeo | Fintech – IA – Innovation</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- EmailJS -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: "#ff5a00",
+            dark: "#0d0d0d"
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+
+    /* Animations */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all .8s ease;
+    }
+
+    .fade-up.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+
+<body class="bg-dark text-white font-sans">
+
+<!-- NAVBAR -->
+<header class="fixed w-full bg-black/90 backdrop-blur z-50">
+  <div class="max-w-6xl mx-auto flex justify-between items-center p-5">
+    <img src="logo.png" class="h-10"/>
+    <nav class="space-x-6 hidden md:block">
+      <a href="#services" class="hover:text-primary">Services</a>
+      <a href="#portfolio" class="hover:text-primary">Portfolio</a>
+      <a href="#pricing" class="hover:text-primary">Tarifs</a>
+      <a href="#contact" class="hover:text-primary">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="h-screen flex flex-col items-center justify-center text-center px-6">
+  <img src="logo.png" class="w-56 mb-8 fade-up"/>
+
+  <h1 class="text-5xl font-bold fade-up">
+    Solutions digitales <span class="text-primary">Fintech & IA</span>
+  </h1>
+
+  <p class="mt-6 text-gray-400 max-w-xl fade-up">
+    Développement d'applications • Intégration API • Gestion de projet Agile
+  </p>
+
+  <a href="#contact" class="mt-8 bg-primary px-8 py-3 rounded-full hover:scale-105 transition fade-up">
+    Discutons de votre projet
+  </a>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="py-24 max-w-6xl mx-auto px-6">
+  <h2 class="text-4xl text-center text-primary mb-16">Nos Services</h2>
+
+  <div class="grid md:grid-cols-3 gap-8">
+    <div class="bg-zinc-900 p-8 rounded-2xl hover:scale-105 transition fade-up">
+      <h3 class="text-xl font-bold mb-4">📱 Développement d'applications</h3>
+      <p>Web, Mobile, SaaS, solutions fintech sur mesure.</p>
+    </div>
+
+    <div class="bg-zinc-900 p-8 rounded-2xl hover:scale-105 transition fade-up">
+      <h3 class="text-xl font-bold mb-4">🔗 Intégration API</h3>
+      <p>Paiements, Mobile Money, banques, ERP, systèmes tiers.</p>
+    </div>
+
+    <div class="bg-zinc-900 p-8 rounded-2xl hover:scale-105 transition fade-up">
+      <h3 class="text-xl font-bold mb-4">📊 Gestion de projet</h3>
+      <p>Scrum, PMP, delivery rapide et sécurisé.</p>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section id="portfolio" class="py-24 bg-black">
+  <h2 class="text-4xl text-center text-primary mb-16">Portfolio</h2>
+
+  <div class="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto px-6">
+    <div class="bg-zinc-800 h-40 rounded-xl flex items-center justify-center fade-up">App Fintech</div>
+    <div class="bg-zinc-800 h-40 rounded-xl flex items-center justify-center fade-up">Mobile Money API</div>
+    <div class="bg-zinc-800 h-40 rounded-xl flex items-center justify-center fade-up">Dashboard IA</div>
+  </div>
+</section>
+
+<!-- TEMOIGNAGES -->
+<section class="py-24">
+  <h2 class="text-4xl text-center text-primary mb-16">Témoignages</h2>
+
+  <div class="max-w-4xl mx-auto space-y-8 px-6">
+    <div class="bg-zinc-900 p-6 rounded-xl fade-up">
+      ⭐⭐⭐⭐⭐ "Agapeo a transformé notre plateforme fintech en 3 mois."
+    </div>
+    <div class="bg-zinc-900 p-6 rounded-xl fade-up">
+      ⭐⭐⭐⭐⭐ "Excellente intégration API Orange Money et MTN."
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing" class="py-24 bg-black">
+  <h2 class="text-4xl text-center text-primary mb-16">Tarifs</h2>
+
+  <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto px-6">
+
+    <div class="bg-zinc-900 p-8 rounded-2xl fade-up">
+      <h3 class="text-xl font-bold mb-4">Startup</h3>
+      <p class="text-3xl text-primary mb-4">$2k+</p>
+      <p>MVP rapide</p>
+    </div>
+
+    <div class="bg-primary text-black p-8 rounded-2xl scale-105 fade-up">
+      <h3 class="text-xl font-bold mb-4">Business</h3>
+      <p class="text-3xl mb-4">$5k+</p>
+      <p>App + API + Dashboard</p>
+    </div>
+
+    <div class="bg-zinc-900 p-8 rounded-2xl fade-up">
+      <h3 class="text-xl font-bold mb-4">Enterprise</h3>
+      <p class="text-3xl text-primary mb-4">Custom</p>
+      <p>Solution complète sur mesure</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="py-24">
+  <h2 class="text-4xl text-center text-primary mb-10">Contactez-nous</h2>
+
+  <form id="contact-form" class="max-w-xl mx-auto space-y-4 px-6">
+    <input name="name" placeholder="Nom" class="w-full p-3 rounded text-black" required>
+    <input name="email" type="email" placeholder="Email" class="w-full p-3 rounded text-black" required>
+    <textarea name="message" placeholder="Votre besoin..." rows="4" class="w-full p-3 rounded text-black"></textarea>
+
+    <button class="bg-primary w-full py-3 rounded font-bold">
+      Envoyer
+    </button>
+  </form>
+</section>
+
+<footer class="text-center py-6 bg-black text-gray-500">
+  © 2026 Agapeo — Fintech • IA • Innovation
+</footer>
+
+<!-- SCRIPTS -->
+
+<script>
+  // Animation au scroll
+  const items = document.querySelectorAll(".fade-up");
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if(e.isIntersecting) e.target.classList.add("show");
+    });
+  });
+
+  items.forEach(i => observer.observe(i));
+
+  // EmailJS
+  emailjs.init("YOUR_PUBLIC_KEY");
+
+  document.getElementById("contact-form").addEventListener("submit", function(e){
+    e.preventDefault();
+
+    emailjs.sendForm("YOUR_SERVICE_ID","YOUR_TEMPLATE_ID",this)
+      .then(() => alert("Message envoyé 🚀"))
+      .catch(() => alert("Erreur d'envoi"));
+  });
+</script>
+
+</body>
+</html>
